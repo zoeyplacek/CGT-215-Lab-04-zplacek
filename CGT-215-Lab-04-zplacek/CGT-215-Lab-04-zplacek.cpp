@@ -12,23 +12,24 @@ void printMenu() {
 //factorial function
 void factorial() {
 	int n; // defining n as an integer
-	cout << "Factorial: " << endl; // prompt
+	cout << "Factorial: " << endl; // prompt and begin new line
 	cout << "Enter a number: "; 
-	cin >> n; // Get the number from the user
+	cin >> n; // stores the number from user
 
-	while (n < 0) { // Check if n is negative
+	while (n < 0) { // Checking if n is negative
 		cout << "Please enter a POSITIVE number: "; // prompt
-		cin >> n; // Get positive number from the user
+		cin >> n; // stores the positive number from user
 	}
 
 	// factorial equation
-	int answer = 1; // defining answer as an integer
+	int answer = 1; // answer starts as 1
 	cout << n << "! = "; // prompt
-	for (int i = 1; i <= n; i++) { // looped i from 1 to n
-		answer = answer * i; // multiply answer by i
+	for (int i = 1; i <= n; i++) { // looped i from 1 to n (user inputed)
+		//i++ = i = i + 1
+		answer = answer * i; // multiply answer by n essentially
 		cout << i;
 		if (i < n) { // if i is less than n
-			cout << " * "; //then multiply
+			cout << " * "; //then prints multiplying
 		}
 	}
 
@@ -40,27 +41,28 @@ void arithmetic() {
 	int a; // starting number, defining a as an integer
 	int b; // adding variable, defining b as an integer
 	int n; // number of elements variable, defining n as an integer
-	cout << "Arithmetic Series: " << endl; // prompt
+	cout << "Arithmetic Series: " << endl; // prompt and begin new line
 	cout << "Enter a number to start at: ";
-	cin >> a; // Get the starting number from the user
+	cin >> a; // stores the starting number from user
 	
 	cout << "Enter a number to add each time: "; // prompt
-	cin >> b; // Get the number to add each time from the user
+	cin >> b; // stores the number to add each time from user
 
 	cout << "Enter the number of elements in the series: "; // prompt
-	cin >> n; // Get the number of elements in the series from the user
+	cin >> n; // stores the number of elements in the series from user
 
-	while (n < 0) { // Check if n is negative
+	while (n < 0) { // Checking if n is negative
 		cout << "Please enter a POSITIVE number: "; // prompt
-		cin >> n; // Get positive number from the user
+		cin >> n; // stores the positive number from user
 	}
 
 	// arithmetic series equation
 	int sum = 0; // defining starting sum as 0
-	for (int i = 1; i <= n; i++) { // looped i from 1 to n
+	for (int i = 1; i <= n; i++) { // looped i from 1 to n (user inputed)
+		//i++ = i = i + 1
 		cout << a;
 		if (i < n) { // if i is less than n
-			cout << " + "; // then add
+			cout << " + "; // then prints adding
 		}
 		sum = sum + a; // add starting number to 0
 		a = a + b; // add number to add each time to starting number
@@ -75,20 +77,26 @@ void geometric() {
 	int n; // number of elements variable, defining n as an integer
 	cout << "Geometric Series: " << endl; // prompt
 	cout << "Enter a number to start at: "; 
-	cin >> a; // Get the starting number from the user
+	cin >> a; // stores the starting number from the user
 
 	cout << "Enter a number to multiply by each time: "; // prompt
-	cin >> r; // get the multiplying variable from the user
+	cin >> r; // stores the multiplying variable from the user
 	
 	cout << "Enter the number of elements in the series: "; // prompt
-	cin >> n; // Get the number of elements in the series from the user
+	cin >> n; // stores the number of elements in the series from the user
 
+	while (n < 0) { // Checking if n is negative
+		cout << "Please enter a POSITIVE number: "; // prompt
+		cin >> n; // stores the positive number from user
+	}
+	
 	// geometric series equation
 	int sum = 0; // defining starting sum as 0
-	for (int i = 1; i <= n; i++) { // looped i from 1 to n
+	for (int i = 1; i <= n; i++) { // looped i from 1 to n (user inputed)
+		//i++ = i = i + 1
 		cout << a;
 		if (i < n) { // if i is less than n
-			cout << " * "; // then multiply
+			cout << " + "; // then prints adding
 		}
 		sum = sum + a; // add starting number to 0
 		a = a * r; // multiply starting number by multiplying variable
